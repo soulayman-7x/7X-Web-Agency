@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>7X Web Agency | حلول رقمية متكاملة</title>
+  <meta name="description" content="مطور ويب فول ستاك من المغرب. نبني مواقع احترافية، برامج إدارة المحلات، شبكات واي فاي، وتحسين SEO.">
+  <link rel="canonical" href="https://soulayman-7x.github.io/7X-Web-Agency/">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://soulayman-7x.github.io/7X-Web-Agency/">
+  <meta property="og:title"       content="7X Web Agency | حلول رقمية متكاملة">
+  <meta property="og:description" content="مطور ويب فول ستاك من المغرب. نبني مواقع احترافية، برامج إدارة المحلات، شبكات واي فاي، وتحسين SEO.">
+  <meta property="og:image"       content="https://soulayman-7x.github.io/7X-Web-Agency/assets/img/og-image.png">
+  <meta property="og:image:width"  content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale"      content="ar_MA">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="7X Web Agency | حلول رقمية متكاملة">
+  <meta name="twitter:description" content="مطور ويب فول ستاك من المغرب. نبني مواقع احترافية، برامج إدارة المحلات، شبكات واي فاي، وتحسين SEO.">
+  <meta name="twitter:image"       content="https://soulayman-7x.github.io/7X-Web-Agency/assets/img/og-image.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon"      href="assets/img/favicon.png">
+
+  <!-- Google Fonts: preconnect then load -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Compiled Tailwind CSS -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <!-- JSON-LD: Organization + Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "7X Web Agency",
+        "url": "https://soulayman-7x.github.io/7X-Web-Agency/",
+        "logo": "https://soulayman-7x.github.io/7X-Web-Agency/assets/img/logo/Logo.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+212607599716",
+          "contactType": "customer service"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Soulayman Id Baha",
+        "jobTitle": "Full-Stack Web Developer",
+        "url": "https://soulayman-7x.github.io/7X-Web-Agency/",
+        "address": { "@type": "PostalAddress", "addressCountry": "MA" },
+        "sameAs": [
+          "https://github.com/soulayman-7x",
+          "https://www.linkedin.com/in/soulayman-id-baha-3559a8237",
+          "https://instagram.com/soulayman_7x/"
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-white text-navy overflow-x-hidden">
+
+  <!-- Skip link -->
+  <a href="#main-content"
+     class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:start-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-electric focus:text-white focus:rounded-lg focus:font-semibold"
+     data-i18n="skipLink">تخطي إلى المحتوى الرئيسي</a>
+
+  <!-- ══════════════════════════════════════════════
+       HEADER — sticky
+  ══════════════════════════════════════════════ -->
+  <header id="site-header"
+          class="fixed top-0 inset-x-0 z-30 transition-shadow duration-300"
+          style="padding-top: env(safe-area-inset-top, 0px);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 gap-4">
+
+        <!-- Logo pill -->
+        <a href="#" aria-label="7X Web Agency - الرئيسية" class="logo-pill shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-electric">
+          <img src="assets/img/logo/Logo-whait.png"
+               alt="7X Web Agency logo"
+               data-i18n-attr="alt:hero.logoAlt"
+               width="90" height="45"
+               class="h-9 w-auto object-contain">
+        </a>
+
+        <!-- Desktop nav -->
+        <nav class="hidden lg:flex items-center gap-6" aria-label="القائمة الرئيسية">
+          <a href="#services" class="text-sm font-semibold text-navy hover:text-electric transition-colors" data-i18n="nav.services">الخدمات</a>
+          <a href="#projects" class="text-sm font-semibold text-navy hover:text-electric transition-colors" data-i18n="nav.projects">أعمالي</a>
+          <a href="#contact"  class="text-sm font-semibold text-navy hover:text-electric transition-colors" data-i18n="nav.contact">تواصل</a>
+        </nav>
+
+        <!-- Desktop actions -->
+        <div class="hidden lg:flex items-center gap-3">
+          <!-- Language toggle -->
+          <button id="lang-toggle"
+                  class="text-sm font-bold text-electric border border-electric rounded-lg px-3 py-1.5 hover:bg-electric hover:text-white transition-all duration-200 min-w-[48px] min-h-[44px]"
+                  aria-label="Switch language"
+                  data-i18n="nav.langToggle">EN</button>
+
+          <!-- WhatsApp button -->
+          <a id="header-wa"
+             href="#"
+             target="_blank" rel="noopener noreferrer"
+             class="btn-primary text-sm px-4 py-2 gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            <span data-i18n="nav.whatsapp">واتساب</span>
+          </a>
+        </div>
+
+        <!-- Mobile: lang toggle + hamburger -->
+        <div class="flex lg:hidden items-center gap-2">
+          <button id="lang-toggle-mob"
+                  class="text-xs font-bold text-electric border border-electric rounded-lg px-2.5 py-1 min-h-[44px] min-w-[44px]"
+                  aria-label="Switch language"
+                  data-i18n="nav.langToggle">EN</button>
+
+          <button id="menu-btn"
+                  class="flex items-center justify-center w-11 h-11 rounded-xl text-navy hover:bg-mist transition-colors"
+                  aria-expanded="false"
+                  aria-controls="mobile-menu"
+                  aria-label="فتح القائمة"
+                  data-i18n-attr="aria-label:nav.menuOpen">
+            <!-- Hamburger icon -->
+            <svg id="icon-open" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+            <!-- Close icon (hidden by default) -->
+            <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile menu (full-screen sheet) -->
+    <div id="mobile-menu"
+         class="lg:hidden fixed inset-0 z-20 bg-white flex flex-col opacity-0 pointer-events-none transition-opacity duration-300"
+         style="padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px);"
+         aria-hidden="true"
+         role="dialog"
+         aria-modal="true"
+         aria-label="القائمة الرئيسية">
+
+      <!-- Sheet header -->
+      <div class="flex items-center justify-between px-6 h-16 border-b border-silver/30">
+        <div class="logo-pill">
+          <img src="assets/img/logo/Logo-whait.png" alt="7X Web Agency logo" data-i18n-attr="alt:hero.logoAlt" width="80" height="40" class="h-8 w-auto">
+        </div>
+        <button id="menu-close-btn"
+                class="flex items-center justify-center w-11 h-11 rounded-xl text-navy hover:bg-mist"
+                aria-label="إغلاق القائمة"
+                data-i18n-attr="aria-label:nav.menuClose">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Sheet nav links -->
+      <nav class="flex flex-col flex-1 px-6 py-8 gap-2" aria-label="القائمة الموبايل">
+        <a href="#services" class="menu-link text-2xl font-bold text-navy hover:text-electric py-4 border-b border-silver/20 transition-colors" data-i18n="nav.services">الخدمات</a>
+        <a href="#projects" class="menu-link text-2xl font-bold text-navy hover:text-electric py-4 border-b border-silver/20 transition-colors" data-i18n="nav.projects">أعمالي</a>
+        <a href="#contact"  class="menu-link text-2xl font-bold text-navy hover:text-electric py-4 border-b border-silver/20 transition-colors" data-i18n="nav.contact">تواصل</a>
+      </nav>
+
+      <!-- Sheet bottom actions -->
+      <div class="px-6 pb-8 flex flex-col gap-3">
+        <a id="menu-wa" href="#" target="_blank" rel="noopener noreferrer"
+           class="btn-primary w-full justify-center text-base">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          <span data-i18n="nav.whatsapp">واتساب</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ══════════════════════════════════════════════
+       MAIN CONTENT
+  ══════════════════════════════════════════════ -->
+  <main id="main-content">
+
+    <!-- ── HERO ── -->
+    <section id="hero" class="relative min-h-[100dvh] flex items-center overflow-hidden pt-16"
+             style="background: linear-gradient(160deg, #ffffff 0%, #F2F5FA 100%);">
+
+      <!-- Background motifs -->
+      <div class="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
+        <!-- Pale filled hexagons -->
+        <svg class="absolute -top-20 -end-20 w-96 h-96 opacity-30 sm:opacity-40" viewBox="0 0 400 400" fill="none">
+          <polygon points="200,10 380,110 380,290 200,390 20,290 20,110" fill="#E6E9FB"/>
+          <polygon points="200,50 350,135 350,265 200,350 50,265 50,135" fill="none" stroke="#0A6CFF" stroke-width="1" opacity="0.3"/>
+        </svg>
+        <!-- Diagonal stripe cluster (corner decoration) -->
+        <svg class="absolute bottom-0 start-0 w-64 h-64 opacity-10 sm:opacity-15" viewBox="0 0 256 256" fill="none">
+          <line x1="0" y1="80"  x2="256" y2="336" stroke="#1F4FE0" stroke-width="2"/>
+          <line x1="0" y1="100" x2="256" y2="356" stroke="#1F4FE0" stroke-width="2"/>
+          <line x1="0" y1="120" x2="256" y2="376" stroke="#1F4FE0" stroke-width="2"/>
+          <line x1="0" y1="140" x2="256" y2="396" stroke="#5B3FE0" stroke-width="2"/>
+          <line x1="0" y1="160" x2="256" y2="416" stroke="#5B3FE0" stroke-width="2"/>
+        </svg>
+        <!-- Orbit curve echoing the logo swoosh -->
+        <svg class="absolute top-1/2 start-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] opacity-5" viewBox="0 0 600 300" fill="none">
+          <ellipse cx="300" cy="150" rx="280" ry="120" stroke="#0A6CFF" stroke-width="1.5"/>
+        </svg>
+        <!-- Outlined hexagons (small accent) -->
+        <svg class="absolute top-1/4 start-10 w-20 h-20 opacity-20 hidden sm:block" viewBox="0 0 80 80" fill="none">
+          <polygon points="40,4 74,22 74,58 40,76 6,58 6,22" fill="none" stroke="#0A6CFF" stroke-width="1.5"/>
+        </svg>
+      </div>
+
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 w-full">
+        <div class="flex flex-col items-center text-center gap-8 lg:gap-12">
+
+          <!-- Eyebrow -->
+          <p class="text-steel font-semibold tracking-wide text-sm sm:text-base opacity-0 animate-fade-in"
+             style="animation-delay:0.1s"
+             data-i18n="hero.eyebrow">سليمان 7X · مطور ويب فول ستاك</p>
+
+          <!-- Large Logo plate -->
+          <div class="logo-plate opacity-0 animate-fade-in"
+               style="animation-delay:0.2s; max-width: clamp(220px, 50vw, 380px); width: 100%;">
+            <img src="assets/img/logo/Logo-whait.png"
+                 alt="7X Web Agency logo"
+                 data-i18n-attr="alt:hero.logoAlt"
+                 width="340" height="200"
+                 class="w-full h-auto object-contain"
+                 style="max-height: clamp(130px, 25vw, 220px);">
+          </div>
+
+          <!-- Headline -->
+          <h1 class="text-navy font-extrabold leading-tight opacity-0 animate-fade-in"
+              style="font-size: clamp(1.75rem, 5vw, 3.5rem); animation-delay:0.35s"
+              data-i18n="hero.headline">نبني لك حضوراً رقمياً يبيع</h1>
+
+          <!-- Sub-headline -->
+          <p class="text-steel max-w-xl opacity-0 animate-fade-in"
+             style="font-size: clamp(0.95rem, 2vw, 1.15rem); line-height: 1.9; animation-delay:0.5s"
+             data-i18n="hero.sub">مواقع، برامج إدارة المحلات، شبكات وتحسين SEO، من الفكرة إلى المبيعات.</p>
+
+          <!-- CTAs -->
+          <div class="flex flex-wrap gap-4 justify-center opacity-0 animate-fade-in" style="animation-delay:0.65s">
+            <a id="hero-wa" href="#" target="_blank" rel="noopener noreferrer" class="btn-primary gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              <span data-i18n="hero.cta1">تواصل عبر واتساب</span>
+            </a>
+            <a href="#projects" class="btn-secondary gap-2" data-i18n="hero.cta2">شاهد أعمالي</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SERVICES & TECH ── -->
+    <section id="services" class="relative py-20 sm:py-28 bg-white overflow-hidden">
+      <!-- Subtle hexagon motif -->
+      <div class="absolute top-0 end-0 w-72 h-72 opacity-20 pointer-events-none" aria-hidden="true">
+        <svg viewBox="0 0 288 288" fill="none"><polygon points="144,8 272,80 272,208 144,280 16,208 16,80" fill="#E6E9FB"/></svg>
+      </div>
+
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Section header -->
+        <div class="mb-14 text-start">
+          <p class="text-electric text-sm font-semibold mb-2 tracking-widest uppercase" data-i18n="services.sectionTitle">الخدمات</p>
+          <h2 class="section-title" data-i18n="services.sectionSub">حلول رقمية متكاملة لنمو أعمالك</h2>
+        </div>
+
+        <!-- Services layout: asymmetric index + detail panel -->
+        <div class="lg:grid lg:grid-cols-5 lg:gap-10 lg:items-start">
+
+          <!-- Service index list -->
+          <ul class="lg:col-span-2 flex flex-col gap-2" id="services-list" role="list">
+            <!-- JS renders these items; static fallback below for no-JS / SEO -->
+            <li class="service-item active" data-service="0" role="listitem" tabindex="0" aria-selected="true">
+              <span class="text-electric font-bold text-sm w-8 shrink-0" aria-hidden="true">01</span>
+              <div>
+                <p class="font-bold text-navy" data-i18n="services.items.0.title">تطوير المواقع</p>
+                <p class="text-sm text-steel mt-0.5 lg:hidden" data-i18n="services.items.0.desc">مواقع سريعة وآمنة تعمل على جميع الأجهزة، مصممة لتحقق أهداف عملك.</p>
+              </div>
+            </li>
+            <li class="service-item" data-service="1" role="listitem" tabindex="0" aria-selected="false">
+              <span class="text-electric font-bold text-sm w-8 shrink-0" aria-hidden="true">02</span>
+              <div>
+                <p class="font-bold text-navy" data-i18n="services.items.1.title">حلول رقمية</p>
+                <p class="text-sm text-steel mt-0.5 lg:hidden" data-i18n="services.items.1.desc">تحويل أعمالك إلى الفضاء الرقمي بأنظمة مخصصة تناسب احتياجاتك تماماً.</p>
+              </div>
+            </li>
+            <li class="service-item" data-service="2" role="listitem" tabindex="0" aria-selected="false">
+              <span class="text-electric font-bold text-sm w-8 shrink-0" aria-hidden="true">03</span>
+              <div>
+                <p class="font-bold text-navy" data-i18n="services.items.2.title">برامج إدارة المحلات</p>
+                <p class="text-sm text-steel mt-0.5 lg:hidden" data-i18n="services.items.2.desc">أنظمة POS متكاملة للمخزون والفواتير والتقارير، مع دعم كامل للغة العربية.</p>
+              </div>
+            </li>
+            <li class="service-item" data-service="3" role="listitem" tabindex="0" aria-selected="false">
+              <span class="text-electric font-bold text-sm w-8 shrink-0" aria-hidden="true">04</span>
+              <div>
+                <p class="font-bold text-navy" data-i18n="services.items.3.title">بناء الشبكات وضبط الواي فاي</p>
+                <p class="text-sm text-steel mt-0.5 lg:hidden" data-i18n="services.items.3.desc">تصميم وتركيب شبكات موثوقة وتغطية واي فاي شاملة للمكاتب والمحلات.</p>
+              </div>
+            </li>
+            <li class="service-item" data-service="4" role="listitem" tabindex="0" aria-selected="false">
+              <span class="text-electric font-bold text-sm w-8 shrink-0" aria-hidden="true">05</span>
+              <div>
+                <p class="font-bold text-navy" data-i18n="services.items.4.title">تحسين SEO وزيادة المبيعات</p>
+                <p class="text-sm text-steel mt-0.5 lg:hidden" data-i18n="services.items.4.desc">استراتيجيات SEO مثبتة ترفع ترتيبك في جوجل وتحوّل الزوار إلى عملاء.</p>
+              </div>
+            </li>
+            <li class="service-item" data-service="5" role="listitem" tabindex="0" aria-selected="false">
+              <span class="text-electric font-bold text-sm w-8 shrink-0" aria-hidden="true">06</span>
+              <div>
+                <p class="font-bold text-navy" data-i18n="services.items.5.title">إضافة المحل إلى خرائط جوجل</p>
+                <p class="text-sm text-steel mt-0.5 lg:hidden" data-i18n="services.items.5.desc">تسجيل وتحسين نشاطك التجاري على خرائط جوجل لجذب العملاء المحليين.</p>
+              </div>
+            </li>
+          </ul>
+
+          <!-- Detail panel (desktop only) -->
+          <div class="hidden lg:flex lg:col-span-3 lg:sticky lg:top-20">
+            <div id="service-panel"
+                 class="w-full rounded-2xl border border-silver/30 bg-mist p-8 min-h-[220px] flex flex-col justify-center gap-4 transition-all duration-300">
+              <!-- JS updates this content -->
+              <div id="panel-icon" class="w-14 h-14 rounded-xl flex items-center justify-center shrink-0"
+                   style="background: linear-gradient(135deg, rgba(10,108,255,0.1), rgba(91,63,224,0.1)); border: 1px solid rgba(10,108,255,0.15);">
+                <!-- Injected by JS -->
+              </div>
+              <div>
+                <h3 id="panel-title" class="text-xl font-bold text-navy mb-2" data-i18n="services.items.0.title">تطوير المواقع</h3>
+                <p id="panel-desc" class="text-steel leading-relaxed" data-i18n="services.items.0.desc">مواقع سريعة وآمنة تعمل على جميع الأجهزة، مصممة لتحقق أهداف عملك.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tech strip -->
+        <div class="mt-20 pt-10 border-t border-silver/30">
+          <p class="text-sm font-semibold text-steel mb-6" data-i18n="services.techTitle">التقنيات التي أعمل بها</p>
+          <div id="tech-strip" class="flex flex-wrap gap-3">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── PROJECTS SHOWCASE ── -->
+    <section id="projects" class="relative py-20 sm:py-28 overflow-hidden"
+             style="background: linear-gradient(160deg, #F2F5FA 0%, #ffffff 100%);">
+
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Section header -->
+        <div class="mb-14 text-start">
+          <p class="text-electric text-sm font-semibold mb-2 tracking-widest uppercase" data-i18n="projects.sectionTitle">أعمالي</p>
+          <h2 class="section-title" data-i18n="projects.sectionSub">مشاريع حقيقية، نتائج حقيقية</h2>
+        </div>
+
+        <!-- DESKTOP layout (≥1024px): project index + sticky browser frame -->
+        <div class="hidden lg:grid lg:grid-cols-5 lg:gap-10 lg:items-start">
+
+          <!-- Project index -->
+          <div class="lg:col-span-2 flex flex-col gap-3" id="proj-index">
+            <!-- Rendered by JS -->
+          </div>
+
+          <!-- Sticky browser frame preview -->
+          <div class="lg:col-span-3 lg:sticky lg:top-20">
+            <div id="desktop-browser" class="browser-frame">
+              <!-- Chrome bar -->
+              <div class="browser-chrome">
+                <span class="browser-dot browser-dot-1"></span>
+                <span class="browser-dot browser-dot-2"></span>
+                <span class="browser-dot browser-dot-3"></span>
+                <span class="browser-address" id="desktop-address">7x-library</span>
+              </div>
+              <!-- Slideshow viewport -->
+              <div class="relative overflow-hidden" style="aspect-ratio: 16/9;">
+                <div id="desktop-slides" class="relative w-full h-full">
+                  <!-- Slides injected by JS -->
+                </div>
+                <!-- Slide dots -->
+                <div id="desktop-dots" class="absolute bottom-3 inset-x-0 flex justify-center gap-1.5 pointer-events-none">
+                  <!-- Dots injected by JS -->
+                </div>
+              </div>
+            </div>
+            <!-- Project info below frame -->
+            <div id="desktop-proj-info" class="mt-6 flex flex-col gap-4">
+              <!-- Rendered by JS -->
+            </div>
+          </div>
+        </div>
+
+        <!-- MOBILE / TABLET layout: horizontal scroll-snap carousel -->
+        <div class="lg:hidden">
+          <!-- Prev/Next buttons + dots above carousel -->
+          <div class="flex items-center justify-between mb-4">
+            <button id="mob-prev" class="flex items-center justify-center w-10 h-10 rounded-xl border border-silver/40 text-navy hover:bg-mist transition-colors" aria-label="المشروع السابق" data-i18n-attr="aria-label:projects.prevProject">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+            </button>
+            <div id="mob-proj-dots" class="flex gap-2"><!-- JS injects --></div>
+            <button id="mob-next" class="flex items-center justify-center w-10 h-10 rounded-xl border border-silver/40 text-navy hover:bg-mist transition-colors" aria-label="المشروع التالي" data-i18n-attr="aria-label:projects.nextProject">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+
+          <!-- Scroll-snap carousel track -->
+          <div id="mob-carousel"
+               class="flex overflow-x-auto snap-x-mandatory scrollbar-none gap-4 pb-4 -mx-4 px-4"
+               aria-live="polite">
+            <!-- Cards injected by JS -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── CONTACT + FOOTER ── -->
+    <section id="contact" class="relative py-20 sm:py-28 bg-navy overflow-hidden">
+      <!-- Background motif -->
+      <div class="absolute inset-0 pointer-events-none opacity-5" aria-hidden="true">
+        <svg viewBox="0 0 800 400" class="w-full h-full" fill="none" preserveAspectRatio="xMidYMid slice">
+          <polygon points="400,20 760,220 760,380 400,380 40,380 40,220" fill="#0A6CFF"/>
+          <ellipse cx="400" cy="200" rx="360" ry="160" stroke="#5B3FE0" stroke-width="1.5"/>
+        </svg>
+      </div>
+
+      <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
+        <!-- Section heading -->
+        <p class="text-electric text-sm font-semibold mb-3 tracking-widest uppercase" data-i18n="contact.sectionTitle">تواصل معي</p>
+        <h2 class="text-white font-extrabold mb-4"
+            style="font-size: clamp(1.5rem, 4vw, 2.5rem);"
+            data-i18n="contact.sectionSub">جاهز لبدء مشروعك؟ تواصل معي اليوم.</h2>
+
+        <!-- WhatsApp CTA -->
+        <div class="mt-10 flex justify-center">
+          <a id="contact-wa" href="#" target="_blank" rel="noopener noreferrer"
+             class="btn-primary text-lg px-8 py-4 gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            <span data-i18n="contact.whatsappCta">تواصل عبر واتساب</span>
+          </a>
+        </div>
+
+        <!-- Email -->
+        <div class="mt-8">
+          <a href="mailto:soulaymanidbaha444@gmail.com"
+             class="text-silver hover:text-white transition-colors text-sm sm:text-base">
+            soulaymanidbaha444@gmail.com
+          </a>
+        </div>
+
+        <!-- Location -->
+        <div class="mt-3 text-steel-light text-sm">
+          <span>📍 </span><span data-i18n="contact.location">المغرب</span>
+        </div>
+
+        <!-- Social icons -->
+        <div class="mt-8 flex items-center justify-center gap-5">
+          <!-- GitHub -->
+          <a href="https://github.com/soulayman-7x" target="_blank" rel="noopener noreferrer"
+             class="text-silver hover:text-white transition-colors p-2 rounded-lg hover:bg-white/10"
+             aria-label="ملف سليمان على GitHub" data-i18n-attr="aria-label:contact.githubAria">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+            </svg>
+          </a>
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/soulayman-id-baha-3559a8237" target="_blank" rel="noopener noreferrer"
+             class="text-silver hover:text-white transition-colors p-2 rounded-lg hover:bg-white/10"
+             aria-label="ملف سليمان على LinkedIn" data-i18n-attr="aria-label:contact.linkedinAria">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </a>
+          <!-- Instagram -->
+          <a href="https://instagram.com/soulayman_7x/" target="_blank" rel="noopener noreferrer"
+             class="text-silver hover:text-white transition-colors p-2 rounded-lg hover:bg-white/10"
+             aria-label="حساب سليمان على Instagram" data-i18n-attr="aria-label:contact.instagramAria">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Divider -->
+        <hr class="border-white/10 my-10">
+
+        <!-- Footer -->
+        <footer>
+          <p class="text-silver text-sm" data-i18n="footer.tagline">7X Web Agency | حلول رقمية متكاملة</p>
+          <p class="text-steel-light text-xs mt-2">
+            &copy; <span id="footer-year">2026</span>
+            <span data-i18n="footer.rights">جميع الحقوق محفوظة</span>
+          </p>
+        </footer>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── PROJECTS DIALOG (case study viewer) ── -->
+  <dialog id="proj-dialog" aria-labelledby="dialog-title" aria-modal="true">
+    <div class="flex flex-col h-full">
+      <!-- Dialog header -->
+      <div class="flex items-center justify-between px-6 py-4 border-b border-silver/30 shrink-0">
+        <h2 id="dialog-title" class="font-bold text-navy text-lg"></h2>
+        <button id="dialog-close"
+                class="flex items-center justify-center w-10 h-10 rounded-xl text-steel hover:bg-mist hover:text-navy transition-colors"
+                aria-label="إغلاق" data-i18n-attr="aria-label:projects.closDialog">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Dialog body -->
+      <div class="flex-1 overflow-y-auto p-6">
+        <!-- Main screenshot + thumbnails -->
+        <div class="browser-frame mb-6">
+          <div class="browser-chrome">
+            <span class="browser-dot browser-dot-1"></span>
+            <span class="browser-dot browser-dot-2"></span>
+            <span class="browser-dot browser-dot-3"></span>
+            <span class="browser-address" id="dialog-address"></span>
+          </div>
+          <div id="dialog-main-img" class="relative overflow-hidden bg-navy" style="aspect-ratio:16/9;">
+            <!-- Main slide injected by JS -->
+          </div>
+        </div>
+
+        <!-- Thumbnails -->
+        <div id="dialog-thumbs" class="flex gap-2 overflow-x-auto scrollbar-none pb-2 mb-6"></div>
+
+        <!-- Project info -->
+        <div class="grid sm:grid-cols-2 gap-6">
+          <div>
+            <p class="text-xs font-semibold text-steel uppercase tracking-widest mb-2" data-i18n="projects.highlightsLbl">المميزات</p>
+            <ul id="dialog-highlights" class="flex flex-col gap-1.5"></ul>
+          </div>
+          <div>
+            <p class="text-xs font-semibold text-steel uppercase tracking-widest mb-2" data-i18n="projects.techLabel">التقنيات</p>
+            <div id="dialog-tech" class="flex flex-wrap gap-2"></div>
+          </div>
+        </div>
+
+        <p id="dialog-summary" class="text-steel leading-relaxed mt-6 text-sm"></p>
+      </div>
+
+      <!-- Dialog footer: action buttons -->
+      <div id="dialog-actions" class="px-6 py-4 border-t border-silver/30 flex flex-wrap gap-3 shrink-0"></div>
+    </div>
+  </dialog>
+
+  <!-- ── FLOATING WHATSAPP BUTTON ── -->
+  <a id="wa-float" href="#" target="_blank" rel="noopener noreferrer"
+     class="wa-float" aria-label="تواصل عبر واتساب" data-i18n-attr="aria-label:floatWa">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <!-- ── DATA + SCRIPTS ── -->
+  <script src="data/site.js"></script>
+  <script src="data/projects.js"></script>
+  <script src="data/i18n.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/projects.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
