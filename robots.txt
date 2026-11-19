@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://soulayman-7x.github.io/7X-Web-Agency/sitemap.xml
